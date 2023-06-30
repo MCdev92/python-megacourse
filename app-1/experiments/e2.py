@@ -1,3 +1,10 @@
-# This will keep printing hello forever
+user_prompt = "Enter a todo:"
+
+todos = []
+
+# Parenthesis are needed for the methods to work print(todo.title())
 while True:
-    print("Hello")
+    todo = input(user_prompt)
+    print(todo.title)
+    todos.append(todo)
+
