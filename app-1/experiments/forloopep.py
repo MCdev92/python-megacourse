@@ -9,12 +9,12 @@ while True:
         case 'add':
             todo = input("Enter a todo: ")
             todos.append(todo)
-        case 'show':
+        case 'show' | 'display': # added a Bitwise or Operator
             for item in todos:
                 print(item)
         case 'exit':
             break
-        case wrong_command: # this will allow the code to remind the user that they entered a wrong command
+        case _: # this will allow the code to remind the user that they entered a wrong command
             print("Hey, you entered an unknown command")
     
 print("Bye!")
