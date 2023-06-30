@@ -2,9 +2,19 @@ user_prompt = "Enter a todo:"
 
 todos = []
 
-# Boolean loop. append and capitalize are methods, methods can take arguments
+# For loop using match to allow the user to choose an action
 while True:
-    todo = input(user_prompt)
-    print(todo.capitalize())
-    todos.append(todo)
+    user_action = input("Type add or show: ")
+
+    match user_action:
+        case 'add':
+            todo = input("Enter a todo: ")
+            todos.append(todo)
+        case 'show':
+            for item in todos:
+                print(item)
+        case 'exit':
+            break
+    
+print("Bye!")
 
