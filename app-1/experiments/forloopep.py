@@ -11,6 +11,7 @@ while True:
             todos.append(todo)
         case 'show' | 'display': # added a Bitwise or Operator
             for item in todos:
+                item = item.title() # you can add more lines under the for line
                 print(item)
         case 'exit':
             break
