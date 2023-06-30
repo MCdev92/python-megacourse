@@ -5,6 +5,6 @@ todos = []
 # Parenthesis are needed for the methods to work print(todo.title())
 while True:
     todo = input(user_prompt)
-    print(todo.title)
+    print(todo.title())
     todos.append(todo)
 
