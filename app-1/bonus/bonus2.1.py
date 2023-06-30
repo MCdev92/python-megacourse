@@ -5,7 +5,8 @@
 
 #print("Password is correct!")
 
-user_prompt = input("name: ")
+
 
 while True: 
-    print(user_prompt.capitalize())
+    name = input("What is your name: ")
+    print(name.capitalize())
