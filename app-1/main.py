@@ -5,6 +5,7 @@ todos = []
 # For loop using match to allow the user to choose an action
 while True:
     user_action = input("Type add or show: ")
+    user_action = user_action.strip()
 
     match user_action:
         case 'add':
