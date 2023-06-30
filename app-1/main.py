@@ -1,11 +1,5 @@
-# user_prompt is a variable that has multiple todo functions
 user_prompt = "Enter a todo:"
-todo1 = input(user_prompt) 
-todo2 = input(user_prompt)
-todo3 = input(user_prompt)
 
-todos = [todo1, todo2, todo3]
-print(todos)
-
-# This line of code will print the type 
-print(type(todo1))
+# while loop basically if 2 is greater than  is going to keep looping
+while 2 > 1:
+    todo = input(user_prompt)
