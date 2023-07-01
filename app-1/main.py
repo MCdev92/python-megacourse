@@ -1,5 +1,3 @@
-user_prompt = "Enter a todo:"
-
 todos = []
 
 # For loop using match to allow the user to choose an action
