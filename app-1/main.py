@@ -13,10 +13,10 @@ while True:
             for item in todos:
                 print(item)
         case 'edit':
-            number = int(input("Number of todo to edit: ")) # This variable will allow us to input am integer number
+            number = int(input("Number of todo to edit: ")) # convert from str to int
             number = number - 1 # This variable will allow the user to choose the right number  i.e: 1-1 = 0, 1-2 = 1
             new_todo = input("Enter new todo: ") # this variable will store new user input in new_todo
-            todos[number] = new_todo # This variable will store and show the new item on the list
+            todos[number] = new_todo # Access items from a list and replace
         case 'exit':
             break
     
