@@ -69,3 +69,24 @@ for item in ["sandals", "glasses", "trousers"):
     #### Two Errors ###
 ## Wrong brackets are used for the list of items
 ## The print function is passing the capitalize method without parenthesis i.e: print(item.capitalize())
+
+# ---------------------------------------------------------------------------------------------------
+### The programmer is trying to extract and print out 'b' using list indexing, but there is an error. Try to fix it.
+
+elements = ['a', 'b', 'c']
+print(elements(1))  ### list objects should be called with [] list not () toples
+
+# ---------------------------------------------------------------------------------------------------
+
+### The code below aims to replace 'b' with 'x' in the list elements.
+
+### However, the output of the code is still ['a', 'b', 'c'].
+
+### Try to fix the code so 'b' is replaced with 'x'.
+
+elements = ['a', 'b', 'c']
+new = 'x'
+new = elements[1] #### The "new" variable should be defined by "element[1]". i.e = elements[1] = new
+print(elements)
+
+# ---------------------------------------------------------------------------------------------------
