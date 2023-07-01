@@ -1,14 +1,20 @@
-todos = []
-
-# For loop using match to allow the user to choose an action
 while True: 
     user_action = input("Type add, show, edit, complete or exit: ")
     user_action = user_action.strip()
 
     match user_action:
         case 'add':
-            todo = input("Enter a todo: ")
-            todos.append(todo)
+            todo = input("Enter a todo: ") + "\n" # + "\n" will create a space between the items
+            
+            file = open("todos.txt", 'r') # this command will open the file in read mode
+            todos = file.readlines() # this commannd reads and creates a list of what is in the file
+            file.close() # we always need to use the close command
+            
+            todos.append(todo) # this command will append the items the user inputs
+            
+            file = open("todos.txt", 'w') # this overwrites the existing file 
+            file.writelines(todos)
+            file.close()
         case 'show':
             for index, item in enumerate(todos): # adding the func enumerate will show number of items
                 row = f"{index + 1}-{item}" #  {index + 1} will make our list start from 1 not zero
