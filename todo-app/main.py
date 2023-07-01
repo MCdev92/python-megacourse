@@ -16,9 +16,14 @@ while True:
             file.writelines(todos)
             file.close()
         case 'show':
-            for index, item in enumerate(todos): # adding the func enumerate will show number of items
-                row = f"{index + 1}-{item}" #  {index + 1} will make our list start from 1 not zero
-                print(row) 
+                file = open("todos.txt", 'r')
+                todos = file.readlines() # this commannd reads and creates a list of what is in the file
+                file.close() # we always need to use the close command
+            
+                for index, item in enumerate(todos): # adding the func enumerate will show number of items
+                    row = f"{index + 1}-{item}" #  {index + 1} will make our list start from 1 not zero
+                    print(row)
+ 
         case 'edit':
             number = int(input("Number of todo to edit: ")) # convert from str to int
             number = number - 1 # This variable will allow the user to choose the right number  i.e: 1-1 = 0, 1-2 = 1
