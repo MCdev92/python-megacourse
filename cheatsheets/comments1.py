@@ -10,3 +10,6 @@
 
 # >>> import builtins to import python functions
 # >>> dir(builtins) will show you a list of functions that you can use in python
+
+# .title() method will convert the first letter capital
+# .capitalize() will convert only the first letter of a string capital
