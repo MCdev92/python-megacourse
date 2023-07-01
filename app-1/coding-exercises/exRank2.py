@@ -1,3 +1,11 @@
+# create a program that:
+
+# 1. Contains the above list.
+
+# 2 Prompts the user to input the person's name.
+
+# 3. Returns the rank that person has.
+
 ranking = ['John', 'Sen', 'Lisa']
  
 # Prompt the user to input a person's name and assign it to the variable 'name'.
