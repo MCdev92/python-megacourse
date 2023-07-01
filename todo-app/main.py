@@ -11,7 +11,8 @@ while True:
             todos.append(todo)
         case 'show':
             for index, item in enumerate(todos): # adding the func enumerate will show number of items
-                print(index, '-', item) # The func will print number, dash, item
+                row = f"{index}-{item}" # Define a new variable named row with f string {index}-{items} to avoid extra space
+                print(row) 
         case 'edit':
             number = int(input("Number of todo to edit: ")) # convert from str to int
             number = number - 1 # This variable will allow the user to choose the right number  i.e: 1-1 = 0, 1-2 = 1
