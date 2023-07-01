@@ -3,3 +3,6 @@ play
 cook
 sing
 run
+Genesis
+Italia
+Manuel
