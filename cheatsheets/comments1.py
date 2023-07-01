@@ -13,3 +13,10 @@
 
 # .title() method will convert the first letter capital
 # .capitalize() will convert only the first letter of a string capital
+
+# Floats and Integers are used to do math operations in python
+# You can convert strings into numbers by using float() or int(). i.e: int("10") = 10, float("5") = 5.0
+
+# The sanme is true for strings. You can change numbers into string by using str()
+
+# The function type() will return the type of format of an argument. i.e: x = 10.0 , type(x) = <float>
