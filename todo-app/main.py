@@ -6,17 +6,17 @@ while True:
         case 'add':
             todo = input("Enter a todo: ") + "\n" # + "\n" will create a space between the items
             
-            file = open("todos.txt", 'r') # this command will open the file in read mode
+            file = open("todo-app/files/todos.txt", 'r') # this command will open the file in read mode
             todos = file.readlines() # this commannd reads and creates a list of what is in the file
             file.close() # we always need to use the close command
             
             todos.append(todo) # this command will append the items the user inputs
             
-            file = open("todos.txt", 'w') # this overwrites the existing file 
+            file = open("todo-app/files/todos.txt", 'w') # this overwrites the existing file 
             file.writelines(todos)
             file.close()
         case 'show':
-                file = open("todos.txt", 'r')
+                file = open("todo-app/files/todos.txt", 'r')
                 todos = file.readlines() # this commannd reads and creates a list of what is in the file
                 file.close() # we always need to use the close command
             
