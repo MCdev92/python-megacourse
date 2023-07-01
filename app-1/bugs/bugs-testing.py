@@ -1,6 +1,4 @@
-rate = 2
-
-dollars = float(input("How many dollars have you got? "))
-euros = dollars * rate
-    
-print(euros)
+elements = ['a', 'b', 'c']
+new = 'x'
+elements[1] = new
+print(elements)
