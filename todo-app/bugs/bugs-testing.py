@@ -1,4 +1,2 @@
-elements = ['a', 'b', 'c']
-new = 'x'
-elements[1] = new
-print(elements)
+for i, j in enumerate("abcd"):
+    print(i + 1)
