@@ -19,11 +19,9 @@ while True:
                 file = open("todo-app/files/todos.txt", 'r')
                 todos = file.readlines() 
                 file.close() 
-                    
-            # Added a new variable (list comprehension) to clean up the list A.K.A remove extra spaces
-                new_todos =[item.strip('\n') for item in todos]
-                    
-                for index, item in enumerate(new_todos): 
+                       
+                for index, item in enumerate(todos): 
+                    item = item.strip('\n') ### adding this variable can serve as a third method to clean up our list
                     row = f"{index + 1}-{item}" 
                     print(row)
  
