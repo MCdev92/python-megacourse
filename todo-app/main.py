@@ -24,19 +24,25 @@ while True:
                 print(row)
 
     elif user_action.startswith('edit'):
-        number = int(user_action[5:]) 
-        print(number)
-        
-        number = number - 1 
-        
-        with open("todo-app/todos.txt", 'r') as file: 
-            todos = file.readlines()
-        
-        new_todo = input("Enter new todo: ") 
-        todos[number] = new_todo + '\n'
-        
-        with open("todo-app/todos.txt", 'w') as file:
-            file.writelines(todos)
+        try:
+            number = int(user_action[5:]) 
+            print(number)
+            
+            number = number - 1 
+            
+            with open("todo-app/todos.txt", 'r') as file: 
+                todos = file.readlines()
+            
+            new_todo = input("Enter new todo: ") 
+            todos[number] = new_todo + '\n'
+            
+            with open("todo-app/todos.txt", 'w') as file:
+                file.writelines(todos)
+        except ValueError:
+            print("Your command is not valid")
+            user_action = input("Type add, show, edit, complete or exit: ")
+            user_action = user_action.strip()
+
         
     elif user_action.startswith('complete'):
         number = int(user_action[9:])
