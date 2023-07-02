@@ -22,7 +22,8 @@ while True:
                 item = item.strip('\n') 
                 row = f"{index + 1}-{item}" 
                 print(row)
-
+                
+    # Try and except added for error handling
     elif user_action.startswith('edit'):
         try:
             number = int(user_action[5:]) 
@@ -42,7 +43,7 @@ while True:
             print("Your command is not valid")
             continue
 
-        
+    # Try and except added for error handling
     elif user_action.startswith('complete'):
         try:
             number = int(user_action[9:])
