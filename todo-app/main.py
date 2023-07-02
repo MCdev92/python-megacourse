@@ -40,24 +40,27 @@ while True:
                 file.writelines(todos)
         except ValueError:
             print("Your command is not valid")
-            user_action = input("Type add, show, edit, complete or exit: ")
-            user_action = user_action.strip()
+            continue
 
         
     elif user_action.startswith('complete'):
-        number = int(user_action[9:])
-        
-        with open("todo-app/todos.txt", 'r') as file: 
-            todos = file.readlines()
-        index = number -1 
-        todo_to_remove = todos[index].strip('\n') 
-        todos.pop(index) 
-        
-        with open("todo-app/todos.txt", 'w') as file:
-            file.writelines(todos)
+        try:
+            number = int(user_action[9:])
             
-        message = f"Todo {todo_to_remove} was removed from the list."
-        print(message)   
+            with open("todo-app/todos.txt", 'r') as file: 
+                todos = file.readlines()
+            index = number -1 
+            todo_to_remove = todos[index].strip('\n') 
+            todos.pop(index) 
+            
+            with open("todo-app/todos.txt", 'w') as file:
+                file.writelines(todos)
+                
+            message = f"Todo {todo_to_remove} was removed from the list."
+            print(message)  
+        except IndexError:
+            print("Wrong command: wrong number")
+            continue 
             
     elif user_action.startswith('exit'):
         break
