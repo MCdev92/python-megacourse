@@ -31,8 +31,15 @@ while True:
         case 'edit':
             number = int(input("Number of todo to edit: ")) 
             number = number - 1 
+            
+            with open("todo-app/files/todos.txt", 'r') as file: 
+                todos = file.readlines()
+            print('here is existing', todos) ## always is the print func for testing!!!!!
+            
             new_todo = input("Enter new todo: ") 
-            todos[number] = new_todo 
+            todos[number] = new_todo + '\n'
+            print('here is how it will look', todos)
+            
         case 'complete':
             number = int(input("Number of the todo to complete: "))
             todos.pop(number - 1) 
