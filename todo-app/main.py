@@ -8,17 +8,17 @@ while True:
             todo = input("Enter a todo: ") + "\n" 
             
             # this is a better way to interact with files
-            with open("todo-app/files/todos.txt", 'r') as file: 
+            with open("todo-app/todos.txt", 'r') as file: 
                 todos = file.readlines()
                 
             todos.append(todo) 
             
-            with open("todo-app/files/todos.txt", 'w') as file:
+            with open("todo-app/todos.txt", 'w') as file:
                 file.writelines(todos)
 
         case 'show':
                 
-            with open("todo-app/files/todos.txt", 'r') as file:
+            with open("todo-app/todos.txt", 'r') as file:
                 todos = file.readlines()
    
                 # new_todos = [item.strip('\n') for item in todos] 
@@ -32,26 +32,26 @@ while True:
             number = int(input("Number of todo to edit: ")) 
             number = number - 1 
             
-            with open("todo-app/files/todos.txt", 'r') as file: 
+            with open("todo-app/todos.txt", 'r') as file: 
                 todos = file.readlines()
             
             new_todo = input("Enter new todo: ") 
             todos[number] = new_todo + '\n'
             
-            with open("todo-app/files/todos.txt", 'w') as file:
+            with open("todo-app/todos.txt", 'w') as file:
                 file.writelines(todos)
             
         # this case will allow user to remove completed item and display name of item removed from list 
         case 'complete':
             number = int(input("Number of the todo to complete: "))
             
-            with open("todo-app/files/todos.txt", 'r') as file: 
+            with open("todo-app/todos.txt", 'r') as file: 
                 todos = file.readlines()
             index = number -1 
             todo_to_remove = todos[index].strip('\n') 
             todos.pop(index) 
             
-            with open("todo-app/files/todos.txt", 'w') as file:
+            with open("todo-app/todos.txt", 'w') as file:
                 file.writelines(todos)
                 
             message = f"Todo {todo_to_remove} was removed from the list."
