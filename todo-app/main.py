@@ -3,6 +3,7 @@ while True:
     user_action = input("Type add, show, edit, complete or exit: ")
     user_action = user_action.strip()
 
+    # slicing added "user_action[4:]"
     if 'add' in user_action:
         todo = user_action[4:] 
         
@@ -27,7 +28,9 @@ while True:
                 print(row)
 
     elif 'edit' in user_action:
-        number = int(input("Number of todo to edit: ")) 
+        number = int(user_action[5:]) 
+        print(number)
+        
         number = number - 1 
         
         with open("todo-app/todos.txt", 'r') as file: 
@@ -41,7 +44,7 @@ while True:
         
     # this case will allow user to remove completed item and display name of item removed from list 
     elif 'complete' in user_action:
-        number = int(input("Number of the todo to complete: "))
+        number = int(user_action[9:])
         
         with open("todo-app/todos.txt", 'r') as file: 
             todos = file.readlines()
@@ -57,6 +60,8 @@ while True:
             
     elif 'exit' in user_action:
         break
+    else:
+        print("Error Command is not Supported")
     
 print("Bye!")
 
