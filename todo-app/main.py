@@ -34,15 +34,29 @@ while True:
             
             with open("todo-app/files/todos.txt", 'r') as file: 
                 todos = file.readlines()
-            print('here is existing', todos) ## always is the print func for testing!!!!!
             
             new_todo = input("Enter new todo: ") 
             todos[number] = new_todo + '\n'
-            print('here is how it will look', todos)
             
+            with open("todo-app/files/todos.txt", 'w') as file:
+                file.writelines(todos)
+            
+        # this case will allow user to remove completed item and display name of item removed from list 
         case 'complete':
             number = int(input("Number of the todo to complete: "))
-            todos.pop(number - 1) 
+            
+            with open("todo-app/files/todos.txt", 'r') as file: 
+                todos = file.readlines()
+            index = number -1 
+            todo_to_remove = todos[index]    
+            todos.pop(index) 
+            
+            with open("todo-app/files/todos.txt", 'w') as file:
+                file.writelines(todos)
+                
+            message = f"Todo {todo_to_remove} was removed from the list."
+            print(message)   
+             
         case 'exit':
             break
     
