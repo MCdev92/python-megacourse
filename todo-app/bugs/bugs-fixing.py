@@ -167,3 +167,31 @@ However, there is an error. Try to fix the error.
 file = open("data.txt", 'r') # the argument should contain 'w' no 'r'
 file.write("100.12") # typo, the string should be "100.2" not "100.12"
 file.close()
+
+# ---------------------------------------------------------------------------------------------------
+
+with open("file.txt", 'r') as file:
+    print(file.read())
+    print(len(file.read()))
+The Python script above is in the same directory with a file named file.txt whose content is:
+
+Hello You
+
+The Python script should print out the content of the file and the number of characters of the text inside file.txt. So, the expected output would be:
+
+Hello You
+9
+However, the script prints out this:
+
+Hello You
+0
+Can you fix the program so it prints out the expected output?
+
+The script should be as follow:
+with open("file.txt", 'r') as file:
+    content = file.read()
+
+print(content)
+print(len(content))
+
+# ---------------------------------------------------------------------------------------------------
