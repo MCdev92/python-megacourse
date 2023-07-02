@@ -48,7 +48,7 @@ while True:
             with open("todo-app/files/todos.txt", 'r') as file: 
                 todos = file.readlines()
             index = number -1 
-            todo_to_remove = todos[index]    
+            todo_to_remove = todos[index].strip('\n') 
             todos.pop(index) 
             
             with open("todo-app/files/todos.txt", 'w') as file:
