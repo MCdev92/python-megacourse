@@ -20,6 +20,9 @@ while True:
                 todos = file.readlines() 
                 file.close() 
                        
+                # new_todos = [item.strip('\n') for item in todos] 
+                
+                  
                 for index, item in enumerate(todos): 
                     item = item.strip('\n') ### adding this variable can serve as a third method to clean up our list
                     row = f"{index + 1}-{item}" 
