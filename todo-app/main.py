@@ -1,9 +1,7 @@
 while True: 
-    # Get user input and strip space characters from it
     user_action = input("Type add, show, edit, complete or exit: ")
     user_action = user_action.strip()
 
-    # slicing added "user_action[4:]"
     if 'add' in user_action:
         todo = user_action[4:] 
         
@@ -19,8 +17,6 @@ while True:
             
         with open("todo-app/todos.txt", 'r') as file:
             todos = file.readlines()
-
-            # new_todos = [item.strip('\n') for item in todos] 
             
             for index, item in enumerate(todos): 
                 item = item.strip('\n') 
@@ -42,7 +38,6 @@ while True:
         with open("todo-app/todos.txt", 'w') as file:
             file.writelines(todos)
         
-    # this case will allow user to remove completed item and display name of item removed from list 
     elif 'complete' in user_action:
         number = int(user_action[9:])
         
