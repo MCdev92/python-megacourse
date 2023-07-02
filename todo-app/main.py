@@ -1,3 +1,9 @@
+# Custom functions can be created with def, need to be place outside of the code
+def get_todos():
+    with open("todo-app/todos.txt", 'r') as file_local: 
+        todos_local = file_local.readlines()
+    return todos_local
+
 while True: 
     user_action = input("Type add, show, edit, complete or exit: ")
     user_action = user_action.strip()
@@ -5,8 +11,7 @@ while True:
     if user_action.startswith('add'):
         todo = user_action[4:] 
         
-        with open("todo-app/todos.txt", 'r') as file: 
-            todos = file.readlines()
+        todos = get_todos() # function called here under todos variable
             
         todos.append(todo + '\n')
         
@@ -15,8 +20,7 @@ while True:
 
     elif user_action.startswith('show'):
             
-        with open("todo-app/todos.txt", 'r') as file:
-            todos = file.readlines()
+            todos = get_todos()
             
             for index, item in enumerate(todos): 
                 item = item.strip('\n') 
@@ -31,8 +35,7 @@ while True:
             
             number = number - 1 
             
-            with open("todo-app/todos.txt", 'r') as file: 
-                todos = file.readlines()
+            todos = get_todos()
             
             new_todo = input("Enter new todo: ") 
             todos[number] = new_todo + '\n'
@@ -48,8 +51,7 @@ while True:
         try:
             number = int(user_action[9:])
             
-            with open("todo-app/todos.txt", 'r') as file: 
-                todos = file.readlines()
+            todos = get_todos()
             index = number -1 
             todo_to_remove = todos[index].strip('\n') 
             todos.pop(index) 
