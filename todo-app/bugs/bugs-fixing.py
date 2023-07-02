@@ -138,3 +138,32 @@ The expected output is this:
 Fix the bug so the program prints out the above output.
 
 # ---------------------------------------------------------------------------------------------------
+
+Take a look at the code below:
+
+file = open("data.txt", 'w')
+ 
+file.write("100.12") # we can add "\n" after the argumenmt 
+file.write("111.23") # we can add "\n" after the argumenmt 
+ 
+file.close()
+The code creates a text file which contains the following content:
+
+100.12111.23
+
+However, the correct content should be:
+
+100.12
+
+111.23
+
+Please fix the code so it creates the file with the correct content.
+
+# ---------------------------------------------------------------------------------------------------
+
+The code below tries to write the string "100.2" to the text file. 
+However, there is an error. Try to fix the error.
+
+file = open("data.txt", 'r') # the argument should contain 'w' no 'r'
+file.write("100.12") # typo, the string should be "100.2" not "100.12"
+file.close()
