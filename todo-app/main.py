@@ -6,8 +6,9 @@ while True:
     match user_action:
         case 'add':
             todo = input("Enter a todo: ") + "\n" 
-        
-            with open("todo-app/files/todos.txt", 'r') as file:
+            
+            # this is a better way to interact with files
+            with open("todo-app/files/todos.txt", 'r') as file: 
                 todos = file.readlines()
                 
             todos.append(todo) 
