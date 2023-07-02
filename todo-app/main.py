@@ -24,7 +24,7 @@ while True:
                 
                   
                 for index, item in enumerate(todos): 
-                    item = item.strip('\n') ### adding this variable can serve as a third method to clean up our list
+                    item = item.strip('\n') 
                     row = f"{index + 1}-{item}" 
                     print(row)
  
