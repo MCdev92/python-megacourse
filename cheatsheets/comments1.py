@@ -20,3 +20,8 @@
 # The sanme is true for strings. You can change numbers into string by using str()
 
 # The function type() will return the type of format of an argument. i.e: x = 10.0 , type(x) = <float>
+
+# we can use two ways to import functions:
+# from functions import get_todos, write_todos, , , , ....... or
+# import functions and add functions.nameofFunction i.e: funnction.get_todos()
+
