@@ -30,3 +30,13 @@
 # Print out the slice ['b', 'c', 'd'] of the letters list using slicing. 
 # letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g']   ..... print(letters[1:4]) this will cut the first letter
 # or Print out the slice ['e', 'f', 'g'] of the letters list using slicing. print(letters[4:])
+
+# def calculate_time(g=9.80665, h):
+   # t = (2 * h / g) ** 0.5
+    # return t
+    
+  
+# time = calculate_time(100)
+# print(time)
+
+# Non-default parameters such as "h" should come first in a function definition, then the default parameters.
