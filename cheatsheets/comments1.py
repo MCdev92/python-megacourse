@@ -25,3 +25,8 @@
 # from functions import get_todos, write_todos, , , , ....... or
 # import functions and add functions.nameofFunction i.e: funnction.get_todos()
 
+# how slicing works: you can slice by specifying which letter [:4] 
+# ie: Print out the slice ['a', 'b', 'c'] of the letters list using slicing. print(leters[:3]) or
+# Print out the slice ['b', 'c', 'd'] of the letters list using slicing. 
+# letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g']   ..... print(letters[1:4]) this will cut the first letter
+# or Print out the slice ['e', 'f', 'g'] of the letters list using slicing. print(letters[4:])
