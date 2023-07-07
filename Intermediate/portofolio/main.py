@@ -21,3 +21,9 @@ with col2:
     improve my skills and become an efficient programmer."""
     
     st.info(content)
+
+
+content = """ 
+    Below you can find some of the projects I have built. Feel free to contact me! """
+    
+st.write(content)    
