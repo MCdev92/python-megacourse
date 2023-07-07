@@ -1,6 +1,6 @@
 import json
 
-with open("questionary-app/questions.json", 'r') as file:
+with open("simpleApps/questionary-app/questions.json", 'r') as file:
     content = file.read()
     
 data = json.loads(content)
