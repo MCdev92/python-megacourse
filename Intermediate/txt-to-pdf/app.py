@@ -17,6 +17,13 @@ for filepath in filepaths:
     pdf.set_font(family="Times", style="B", size=24)
     pdf.cell(w=50, h=8, txt=name, ln=1) 
     
+    # Get the content of each text file
+    with open(filepath, "r") as file:
+        content = file.read()
+    # Add the text file content to the PDF
+    pdf.set_font(family="Times", size=12)
+    pdf.multi_cell(w=0, h=6, txt=content)
+    
 # produce the PDF in desire Dir
 pdf.output(f"intermediate/txt-to-pdf/PDFs/output.pdf")
     
