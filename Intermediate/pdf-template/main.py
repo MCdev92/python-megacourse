@@ -38,4 +38,4 @@ for index, row in df.iterrows():
         for y in range(20, 298, 10): # add lines to your pages
             pdf.line(10, y, 200, y)
         
-pdf.output("output.pdf")
+pdf.output("intermediate/pdf-template/PDFs/output.pdf")
