@@ -24,6 +24,10 @@ for filepath in filepaths:
     pdf.set_font(family="Times", size=12)
     pdf.multi_cell(w=0, h=6, txt=content)
     
+    # Add Footer Signature
+    pdf.footer()
+    pdf.cell(w=0, h=10, txt="Mcdev92", align="R") 
+    
 # produce the PDF in desire Dir
 pdf.output(f"intermediate/txt-to-pdf/PDFs/output.pdf")
     
