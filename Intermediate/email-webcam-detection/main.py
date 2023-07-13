@@ -14,7 +14,7 @@ count = 1
 
 
 def clean_folder():
-    images = glob.glob("images/*.png")
+    images = glob.glob("Intermediate/email-webcam-detection/images/*.png")
     for image in images:
         os.remove(images)
         
@@ -46,7 +46,7 @@ while True:
             status = 1
             cv2.imwrite(f"images/{count}.png", frame)
             count = count + 1
-            all_images = glob.glob("images/*.png")
+            all_images = glob.glob("Intermediate/email-webcam-detection/images/*.png")
             index = int(len(all_images) / 2)
             image_with_object = all_images[index]
            
