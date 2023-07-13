@@ -26,4 +26,4 @@ def send_email(image_path):
     print("send_email function ended")
     
 if __name__ == "__main__":
-    send_email(image_path="Intermediate/email-webcam-detection/images/7.png")
+    send_email(image_path="Intermediate/email-webcam-detection/images/10.png")
