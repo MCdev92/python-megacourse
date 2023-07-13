@@ -25,6 +25,7 @@ def clean_folder():
 while True:
     status = 0
     check, frame = video.read()
+    
     gray_frame = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
     gray_frame_gau = cv2.GaussianBlur(gray_frame, (21, 21), 0)
     
@@ -73,7 +74,9 @@ while True:
     
     if key == ord("q"):
         break
+    
+# start clean images thread
+clean_thread.start()
+
 
 video.release()
-
-clean_thread.start()
