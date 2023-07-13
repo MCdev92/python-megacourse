@@ -44,7 +44,7 @@ while True:
         rectangle = cv2.rectangle(frame, (x, y), (x+w, y+h), (0, 255, 0), 3)
         if rectangle.any:
             status = 1
-            cv2.imwrite(f"images/{count}.png", frame)
+            cv2.imwrite(f"Intermediate/email-webcam-detection/images/{count}.png", frame)
             count = count + 1
             all_images = glob.glob("Intermediate/email-webcam-detection/images/*.png")
             index = int(len(all_images) / 2)
@@ -57,6 +57,7 @@ while True:
     if status_list[0] == 1 and status_list[1] == 0:
          send_email(image_with_object)
          clean_folder()
+         
     print(status_list)
             
     cv2.imshow("video", frame)
