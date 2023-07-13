@@ -6,7 +6,7 @@ st.set_page_config(layout="wide")
 col1, col2 = st.columns(2)
 
 with col1:
-    st.image("/Users/mcdev92/repos/python-megacourse/intermediate/portofolio/images/mypic.png")
+    st.image("images/mypic.png")
 
     
 with col2:
@@ -30,7 +30,6 @@ content2 = """
 st.write(content2)   
 
 col3, empty_col, col4 = st.columns([1.5, 0.5, 1.5])
-
 df = pandas.read_csv("data.csv", sep=";") 
 
 with col3:
