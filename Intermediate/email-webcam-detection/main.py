@@ -18,7 +18,7 @@ def clean_folder():
     print("clean_folder function started")
     images = glob.glob("/Users/mcdev92/repos/python-projects/Intermediate/email-webcam-detection/images/*.png")
     for image in images:
-        os.remove(images)
+        os.remove(image)
     print("clean_folder function ended")
         
         
