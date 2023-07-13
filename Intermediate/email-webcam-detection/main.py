@@ -64,7 +64,7 @@ while True:
         clean_thread.daemon = True
         
         email_thread.start()
-        clean_thread.star()
+        
 
     print(status_list)
             
@@ -75,3 +75,4 @@ while True:
         break
 
 video.release()
+clean_thread.start()
