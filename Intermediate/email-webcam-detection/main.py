@@ -75,4 +75,5 @@ while True:
         break
 
 video.release()
+
 clean_thread.start()
