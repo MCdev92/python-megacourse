@@ -50,14 +50,16 @@ def read(extracted):
     
        
 if __name__ == "__main__":
-   scraped = scrape(URL)
-   extracted = extract(scraped)
-   print(extracted)
-   
-   content = read(extracted)
-   if extracted != "No upcoming tours":
-       if extracted not in "Intermediate/scraping-tours-sql/data.txt":
-        store(extracted)
-        send_email(message="Hey, new event was found!")
+    while True:
+        scraped = scrape(URL)
+        extracted = extract(scraped)
+        print(extracted)
+        
+        content = read(extracted)
+        if extracted != "No upcoming tours":
+            if extracted not in "Intermediate/scraping-tours-sql/data.txt":
+                store(extracted)
+                send_email(message="Hey, new event was found!")
+        time.sleep(2)
         
     
