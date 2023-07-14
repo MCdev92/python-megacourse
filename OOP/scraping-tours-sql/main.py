@@ -45,7 +45,7 @@ class Email:
 class Database:   
    
     def __init__(self, database_path): 
-        self.connection = sqlite3.connect("Intermediate/scraping-tours-sql/data.db")
+        self.connection = sqlite3.connect("OOP/scraping-tours-sql/data.db")
         
     def store(self, extracted):
         row = extracted.split(",")
