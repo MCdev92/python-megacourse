@@ -6,7 +6,7 @@ PDF Invoices;A script that reads invoice records from Excel files and automatica
 Positive News Site;A website that gets data from a news API and uses sentiment analysis to publish only positive news.;https://pythonhow.com;5.png
 Weather API;A REST API built with Python and Flask to serve historical weather data for various cities.;https://tinyurl.com/33jzadnr;6.png
 Download Cleaner;A script that monitors the Downloads folder and deletes old files keeping the folder clean.;https://pythonhow.com;7.png
-Tour Scraper;A program that checks a music band's website and sends an email when there are new tours.;https://shorturl.at/ksBI6;8.png
+Tour Scraper;A program that checks a music band's website and sends an email when there are new tours.;https://shorturl.at/klEN9;8.png
 Helper Chatbot;A chatbot that knows about a specific topic and answers questions regarding that topic.;https://pythonhow.com;9.png
 Open Domain Chatbot;A chatbot built that can discuss anything with a human and is built using the Facebook API.;https://pythonhow.com;10.png
 Webcam Motion Detector;A program that monitors the computer webcam and sends an email when a new object enters the view.;https://shorturl.at/msS49;11.png
