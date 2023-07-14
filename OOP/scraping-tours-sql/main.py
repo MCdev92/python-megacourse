@@ -64,8 +64,7 @@ class Database:
         print(rows)
         return rows
 
-    
-       
+      
 if __name__ == "__main__":
     while True:
         event = Event() # Event class called
