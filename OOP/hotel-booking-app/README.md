@@ -1,0 +1,10 @@
+# Hotel Booking App
+
+User can see a list of hotels
+User can book a hotel
+User can get a reservation ticket
+
+Classes:
+User
+Hotel
+ReservationTicket
