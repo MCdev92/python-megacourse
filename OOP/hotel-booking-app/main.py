@@ -1,5 +1,5 @@
 import pandas
-
+ 
 df = pandas.read_csv("OOP/hotel-booking-app/hotels.csv", dtype={"id": str})
 df_cards = pandas.read_csv("OOP/hotel-booking-app/cards.csv", dtype=str).to_dict(orient="records")
 df_cards_security = pandas.read_csv("OOP/hotel-booking-app/card_security.csv", dtype=str)
@@ -14,7 +14,7 @@ class Hotel: # --- Parent Class ---
     def book(self):
         """Book a hotel by changing its avaliability to no"""
         df.loc[df["id"] == self.hotel_id, "available"] = "no"
-        df.to_csv("hotels.csv", index=False)
+        df.to_csv("OOP/hotel-booking-app/hotels.csv", index=False)
         
     
     def avaliable(self):
