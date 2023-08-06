@@ -1,9 +1,12 @@
+import os
 import openai
+
+PASSWORD = os.getenv("OPENAIKEY")
 
 class Chatbot:
     def __init__(self):
-        openai.api_key = "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"
-    
+        openai.api_key = PASSWORD
+        
     def get_response(self, user_input):
         response = openai.Completion.create(
             engine="text-davinci-003",
