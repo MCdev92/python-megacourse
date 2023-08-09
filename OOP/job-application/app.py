@@ -13,9 +13,9 @@ class Form(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     first_name = db.Column(db.String(80))
     last_name = db.Column(db.String(80))
-    email = db.column(db.String(80))
-    date = db.column(db.Date)
-    occupation = db.column(db.String(80))
+    email = db.Column(db.String(80))
+    date = db.Column(db.Date)
+    occupation = db.Column(db.String(80))
     
 @app.route("/", methods=["GET", "POST"])
 def index():
@@ -29,7 +29,7 @@ def index():
         
         form = Form(first_name=first_name, last_name=last_name, 
                     email=email, date=date_obj, occupation=occupation)        
-        
+        print(form)
         db.session.add(form)
         db.session.commit()   
         
