@@ -26,18 +26,9 @@ The Chatbot Application is a graphical user interface (GUI) program built using 
 #### Running the Chatbot Application
 * Execute the following Python script to run the chatbot application:
 
-```python
-import sys
-import threading
-from backend import Chatbot
-from PyQt6.QtWidgets import QApplication, QMainWindow, QTextEdit, QLineEdit, QPushButton
+https://github.com/MCdev92/python-projects/blob/master/OOP/chatbot-gpt/main.py
 
-class ChatbotWindow(QMainWindow):
-    # ... (your ChatbotWindow class code)
+note make sure you have the backend.py ready before running main.py
 
-if __name__ == "__main__":
-    app = QApplication(sys.argv)
-    main_window = ChatbotWindow()
-    sys.exit(app.exec())
-
-
+backend.py: 
+https://github.com/MCdev92/python-projects/blob/master/OOP/chatbot-gpt/backend.py
