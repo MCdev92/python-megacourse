@@ -40,12 +40,4 @@ if __name__ == "__main__":
     main_window = ChatbotWindow()
     sys.exit(app.exec())
 
-#### Using the Chatbot 
-* Once the chatbot application is launched, you can start interacting with the chatbot using the following steps:
-
-1. User Input: In the application window, type your messages in the input field.
-
-2. Sending Messages: Press Enter or click the "Send" button to send your message to the chatbot.
-
-3. Receiving Responses: The chatbot, powered by the OpenAI GPT-3 model, will respond to your messages. The conversation will be displayed in the chat area within the application window.
 
