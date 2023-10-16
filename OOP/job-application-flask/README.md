@@ -10,7 +10,7 @@ The Flask Form Submission and Email Notification App is a Python-based web appli
 * Flask-SQLAlchemy
 * Flask-Mail
 
-### Installation and Setup
+### Setup
 1. Environment Variables:
 
 * Create an environment variable named PASSWORD to store your email account's password, which is used for sending email notifications.
