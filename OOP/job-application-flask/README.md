@@ -30,11 +30,11 @@ The Flask Form Submission and Email Notification App is a Python-based web appli
 #### Running the Chatbot Application
 Run the application by executing the provided Python script. This script initializes the Flask app, creates the database, and starts the development server.
 
-python
-Copy code
+code:
 if __name__ == "__main__":
     with app.app_context():
         db.create_all()
         app.run(debug=True, port=5001)
+
 
 
